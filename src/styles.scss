@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("./assets/font/Roboto-Light.ttf") format("ttf"),
+    url("./assets/font/roboto-light-webfont.woff") format("woff");
+}
+
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}

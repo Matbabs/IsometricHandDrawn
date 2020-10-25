@@ -1,0 +1,19 @@
+#credits{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+#credits:hover{
+    cursor: pointer;
+}
+
+.modal{
+    z-index: 10000000;
+}
+
+i{
+    margin-right: 10px;
+    font-size: 40px;
+    vertical-align: middle;
+}

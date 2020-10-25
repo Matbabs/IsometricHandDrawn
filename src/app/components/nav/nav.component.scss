@@ -1,0 +1,26 @@
+.nav{
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0);
+}
+
+.nav > a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto';
+}
+
+i{
+    font-size: 40px; 
+    vertical-align: middle;
+    transition-property: all;
+    transition-duration: 250ms;
+}
+
+input{
+    width: 70px;
+}
+
+i:hover{
+    transform: rotate(30deg);
+    cursor: pointer;
+}
