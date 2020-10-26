@@ -16,11 +16,13 @@ export class NavComponent implements OnInit {
   }
 
   resizeMap(){
-    if(this.size <= 0)
-      this.size = 1
-    if(this.size > 30)
-      this.size = 30
-    this.mapService.resizeMaps(this.size)
+    this.size <= 0 ? this.size = 1 : this.size
+    this.size > 30 ? this.size = 30 : this.size
+    this.mapService.initMaps(this.size)
+  }
+
+  transpose(){
+    this.mapService.tileMaps[1].transpose()
   }
 
 }

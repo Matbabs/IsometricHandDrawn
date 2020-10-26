@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import {Tile} from '../models/tile';
 import { TileMap } from '../models/tileMap';
 
 @Injectable({
@@ -7,22 +6,18 @@ import { TileMap } from '../models/tileMap';
 })
 export class MapService {
 
-  private _tileMap:TileMap
-  private _randomMap:TileMap
+  private _tileMaps:TileMap[] = []
 
   constructor() {
-    this._tileMap = new TileMap()
-    this._randomMap = new TileMap()
-    this._randomMap.randomizeMap()
+    this.initMaps()
   }
 
-  resizeMaps(n:number){
-    this._tileMap = new TileMap(n)
-    this._randomMap = new TileMap(n)
-    this._randomMap.randomizeMap()
+  initMaps(n?:number){
+    for(let i=0; i<2 ; i++)
+      n ? this._tileMaps[i] = new TileMap(n) : this._tileMaps[i] = new TileMap()
+    this._tileMaps[1].randomizeMap()
   }
 
-  get tileMap(){return this._tileMap}
-  get tileMapRandom(){return this._randomMap}
+  get tileMaps(){return this._tileMaps}
 
 }

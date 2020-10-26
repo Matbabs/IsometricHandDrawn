@@ -34,5 +34,3 @@ export class Tile{
     get image(){return this._image}
     
 }
-
- 

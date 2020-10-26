@@ -1,15 +1,11 @@
 <app-nav></app-nav>
 
-<img 
-    [src]="'assets/images/city_game_tileset/'+tile.image+'.png'" 
-    *ngFor="let tile of mapService.tileMap.tiles" 
-    [ngStyle]="{'width':'191px','position':'absolute','top':tile.y+'px','left':tile.x+'px'}"
->
-
-<img 
-    [src]="'assets/images/city_game_tileset/'+tile.image+'.png'" 
-    *ngFor="let tile of mapService.tileMapRandom.tiles" 
-    [ngStyle]="{'width':'191px','position':'absolute','top':tile.y+'px','left':tile.x+'px'}"
->
+<div *ngFor="let map of mapService.tileMaps">
+    <img 
+        *ngFor="let tile of map.tiles" 
+        [src]="'assets/images/city_game_tileset/'+tile.image+'.png'" 
+        [ngStyle]="{'width':'191px','position':'absolute','top':tile.y+'px','left':tile.x+'px'}"
+    >
+</div>
 
 <app-foot></app-foot>
